@@ -88,7 +88,7 @@
                         if (resp.data.code === 200) {
                             this.list = resp.data.data.list
                             let current = resp.data.data.current === 0 ? 1 : resp.data.data.current;
-                            let size = resp.data.data.size === 0 ? 10 : resp.data.data.size;
+                            let size = resp.data.data.size < 10 ? 10 : resp.data.data.size;
                             this.$emit("initPageParam", [current, size, resp.data.data.total])
                         }
                         if (resp.data.code === 500) {

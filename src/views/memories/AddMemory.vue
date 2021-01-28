@@ -131,7 +131,11 @@
             handleSuccess(response) {
                 this.form.url = response.data;
             },
-            handleError() {
+            handleError(file) {
+                const maxSize = 2 * 1024 * 1024;
+                if (file.size > maxSize) {
+                    this.$message({message: '上传图片大小不能超过2M', type: "error", center: true,});
+                }
                 this.$message({message: '上传失败,请重试', type: "error", center: true,});
             }
         }
