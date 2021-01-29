@@ -8,7 +8,7 @@
                center
                @close="clear">
         <span style="height: 282px;width: 38%;float: left">
-            <el-upload action="http://localhost:8444/memory/upload"
+            <el-upload :action="uploadUrl"
                        :data="user"
                        :show-file-list="false"
                        :before-upload="beforeUpload"
@@ -16,7 +16,7 @@
                        :on-error="handleError">
                 <img v-if="form.url" :src="form.url" alt="图片丢失了">
                 <img v-else :src="require('../../assets/upload.jpg')" alt="图片丢失了"
-                   style="border-style: dashed;color: #cac6c6">
+                     style="border-style: dashed;color: #cac6c6">
             </el-upload>
         </span>
         <span style="height: 282px;width: 62%;float: right">
@@ -69,11 +69,13 @@
                     place: '',
                     detail: ''
                 },
-                dialogFormVisible: false
+                dialogFormVisible: false,
+                uploadUrl: ''
             }
         },
         created() {
             this.user.userId = window.localStorage.getItem('user').substring(7, 39);
+            this.uploadUrl = process.env.VUE_APP_UPLOAD_URL
         },
         methods: {
             clear() {

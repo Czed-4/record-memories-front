@@ -5,7 +5,8 @@ import store from './store'
 import './plugins/element.js'
 
 const axios = require('axios');
-axios.defaults.baseURL = 'http://localhost:8444';
+const baseUrl = process.env.VUE_APP_API_URL
+axios.defaults.baseURL = baseUrl;
 axios.defaults.withCredentials = true;
 axios.defaults.timeout = 10000;
 
