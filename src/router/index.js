@@ -27,8 +27,9 @@ export default new VueRouter({
         {
             path: '/home',
             name: 'Home',
-            component: Home,
             redirect: '/index',
+            component: Home,
+            meta: {requireAuth: true},
             children: [
                 {
                     path: '/index',
