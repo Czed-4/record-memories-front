@@ -8,7 +8,8 @@
                center
                @close="clear">
         <span style="height: 282px;width: 38%;float: left">
-            <el-upload :action="uploadUrl"
+            <el-upload withCredentials
+                       :action="uploadUrl"
                        :data="user"
                        :show-file-list="false"
                        :before-upload="beforeUpload"
