@@ -9,6 +9,7 @@
             {{ item.navItem }}
         </el-menu-item>
         <span>Welcome to your memories palace</span>
+        <i class="el-icon-switch-button" v-on:click="logout"/>
     </el-menu>
 </template>
 
@@ -23,11 +24,32 @@
                     {name: '/user', navItem: '个人中心'}
                 ]
             }
+        },
+        methods: {
+            logout() {
+                this.$axios
+                    .get('/logout')
+                    .then(resp => {
+                        if (resp.data.code === 200) {
+                            this.$store.commit('logout')
+                            this.$router.replace('/login')
+                        }
+                    })
+            }
         }
     }
 </script>
 
 <style scoped>
+    span {
+        pointer-events: none;
+        position: absolute;
+        top: 15px;
+        right: 35%;
+        font-size: 25px;
+        font-weight: bold
+    }
+
     .menu {
         background: black;
         color: white;
@@ -36,12 +58,12 @@
         position: relative;
     }
 
-    span {
-        pointer-events: none;
-        position: absolute;
-        top: 15px;
-        right: 35%;
-        font-size: 25px;
-        font-weight: bold
+    .el-icon-switch-button {
+        cursor: pointer;
+        outline: 0;
+        float: right;
+        font-size: 40px;
+        color: white;
+        padding: 10px
     }
 </style>

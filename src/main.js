@@ -16,7 +16,11 @@ Vue.config.productionTip = false;
 router.beforeEach((to, from, next) => {
         if (to.meta.requireAuth) {
             if (store.state.user.username) {
-                next()
+                axios
+                    .get('/authentication')
+                    .then(resp => {
+                        if (resp.data) next()
+                    })
             } else {
                 next({
                     path: '/login',
