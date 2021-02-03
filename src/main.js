@@ -19,7 +19,14 @@ router.beforeEach((to, from, next) => {
                 axios
                     .get('/authentication')
                     .then(resp => {
-                        if (resp.data) next()
+                        if (resp.data && resp.data.code === 200) {
+                            next()
+                        } else {
+                            next({
+                                path: '/login',
+                                query: {redirect: to.fullPath}
+                            })
+                        }
                     })
             } else {
                 next({

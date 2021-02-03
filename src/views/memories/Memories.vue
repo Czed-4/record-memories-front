@@ -126,7 +126,7 @@
 
 <style>
     .pagination > span {
-        color: black !important;
+        color: white !important;
         font-size: 14px !important;
     }
 </style>

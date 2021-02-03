@@ -9,6 +9,7 @@ import Memories from "../views/memories/Memories";
 Vue.use(VueRouter)
 
 export default new VueRouter({
+    base: process.env.BASE_URL,
     mode: 'history',
     routes: [
         {
