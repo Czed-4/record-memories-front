@@ -7,7 +7,12 @@
                center
                @close="clear">
         <span style="height: 282px;width: 38%;float: left">
-            <img :src="form.url" alt="图片丢失了"/>
+            <img class="img" :src="form.url" alt="图片丢失了" @click="dialogVisible = true"/>
+            <el-dialog :visible.sync="dialogVisible"
+                       :modal="false"
+                       size="tiny">
+              <img width="100%" :src="form.url" alt="图片丢失了">
+            </el-dialog>
         </span>
         <span style="height: 282px;width: 62%;float: right">
                 <el-form v-model="form" style="text-align: left">
@@ -48,6 +53,7 @@
         data() {
             return {
                 dialogFormVisible: false,
+                dialogVisible: false,
                 form: {
                     id: '',
                     userId: '',
@@ -93,7 +99,7 @@
 </script>
 
 <style scoped>
-    img {
+    .img {
         width: 200px;
         height: 262px;
     }
