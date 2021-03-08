@@ -1,9 +1,13 @@
 import Vue from 'vue'
 import App from './App.vue'
+import Carousel from 'element-ui'
+import CarouselItem from 'element-ui'
 import router from './router'
 import store from './store'
 import './plugins/element.js'
 
+Vue.use(Carousel)
+Vue.use(CarouselItem)
 const axios = require('axios');
 const baseUrl = process.env.VUE_APP_API_URL
 axios.defaults.baseURL = baseUrl;
