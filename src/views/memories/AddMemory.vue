@@ -122,12 +122,12 @@
             beforeUpload(file) {
                 const jpg = 'image/jpeg';
                 const png = 'image/png';
-                const maxSize = 2 * 1024 * 1024;
+                const maxSize = 5 * 1024 * 1024;
                 if (file.type !== jpg && file.type !== png) {
                     this.$message({message: '仅支持JPG/PNG格式的图片', type: "error", center: true,});
                 }
                 if (file.size > maxSize) {
-                    this.$message({message: '上传图片大小不能超过2M', type: "error", center: true,});
+                    this.$message({message: '上传图片大小不能超过5M', type: "error", center: true,});
                 }
                 return true;
             },
@@ -135,9 +135,9 @@
                 this.form.url = response.data;
             },
             handleError(file) {
-                const maxSize = 2 * 1024 * 1024;
+                const maxSize = 5 * 1024 * 1024;
                 if (file.size > maxSize) {
-                    this.$message({message: '上传图片大小不能超过2M', type: "error", center: true,});
+                    this.$message({message: '上传图片大小不能超过5M', type: "error", center: true,});
                 }
                 this.$message({message: '上传失败,请重试', type: "error", center: true,});
             }
