@@ -1,5 +1,5 @@
 <template>
-    <el-carousel height="655px"
+    <el-carousel height="666px"
                  :interval=3000
                  :initial-index=0
                  arrow="always"

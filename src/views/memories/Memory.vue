@@ -75,7 +75,7 @@
         },
         methods: {
             loadMemory() {
-                let userId = window.localStorage.getItem('user').substring(7, 39);
+                let userId = JSON.parse(window.localStorage.getItem('user' || '[]')).id;
                 this.$axios.post('/memory/queryAll', {
                     entity: {
                         userId: userId

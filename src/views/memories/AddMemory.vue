@@ -77,7 +77,7 @@
             }
         },
         created() {
-            this.user.userId = window.localStorage.getItem('user').substring(7, 39);
+            this.user.userId = JSON.parse(window.localStorage.getItem('user' || '[]')).id;
             this.uploadUrl = process.env.VUE_APP_UPLOAD_URL
         },
         methods: {
@@ -106,7 +106,7 @@
                     return;
                 }
                 this.$axios.post('/memory/add', {
-                    userId: window.localStorage.getItem('user').substring(7, 39),
+                    userId: JSON.parse(window.localStorage.getItem('user' || '[]')).id,
                     url: this.form.url,
                     title: this.form.title,
                     type: this.form.type,

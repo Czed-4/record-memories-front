@@ -3,6 +3,7 @@
         <el-aside>
             <side-menu ref="sideMenu"/>
         </el-aside>
+        <router-view/>
     </el-container>
 </template>
 

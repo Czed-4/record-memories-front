@@ -17,8 +17,8 @@
     .homeBackground {
         background: url("../assets/home.jpg") no-repeat center;
         background-size: cover;
-        height: 100%;
-        width: 100%;
+        height: calc(100vh + 260px);
+        width: calc(100vw + 200px);
         top: 0;
         left: 0;
         position: fixed;

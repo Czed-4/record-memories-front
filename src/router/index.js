@@ -6,6 +6,8 @@ const Login = () => import("../views/Login")
 const Home = () => import("../views/Home")
 const User = () => import("../views/user/User")
 const Memories = () => import("../views/memories/Memories")
+const UserInfo = () => import("../views/user/UserInfo")
+
 Vue.use(VueRouter)
 
 export default new VueRouter({
@@ -47,7 +49,15 @@ export default new VueRouter({
                     path: '/user',
                     name: 'User',
                     component: User,
-                    meta: {requireAuth: true}
+                    meta: {requireAuth: true},
+                    children: [
+                        {
+                            path: '/userInfo',
+                            name: 'UserInfo',
+                            component: UserInfo,
+                            meta: {requireAuth: true}
+                        }
+                    ]
                 }]
         }
     ]

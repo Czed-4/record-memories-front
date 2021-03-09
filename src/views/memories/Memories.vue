@@ -43,7 +43,7 @@
         },
         methods: {
             loadMemoryByType() {
-                let userId = window.localStorage.getItem('user').substring(7, 39);
+                let userId = JSON.parse(window.localStorage.getItem('user' || '[]')).id;
                 let type = this.$refs.sideMenu.index === '0' ? '' : this.$refs.sideMenu.index;
                 this.$refs.memory.list = [];
                 this.$axios.post('/memory/queryAll', {
@@ -68,7 +68,7 @@
                 })
             },
             searchMemory() {
-                let userId = window.localStorage.getItem('user').substring(7, 39);
+                let userId = JSON.parse(window.localStorage.getItem('user' || '[]')).id;
                 let type = this.$refs.sideMenu.index === '0' ? '' : this.$refs.sideMenu.index;
                 let keyword = this.$refs.searchMemory.keyword;
                 this.$refs.memory.list = [];
@@ -113,7 +113,7 @@
 
 <style scoped>
     .pagination {
-        margin-left: 250px;
+        margin-left: 340px;
         padding-top: 5px;
         position: fixed;
     }

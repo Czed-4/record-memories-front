@@ -1,12 +1,16 @@
 <template>
-    <el-menu class="menu"
-             @select="handleSelect"
-             default-active="0"
+    <el-menu :default-active="this.$route.path"
+             router
+             class="menu"
+             mode="horizontal"
              text-color="white"
              active-text-color="red">
-        <el-menu-item index="0">
-            <i class="el-icon-check"></i>
-            <span slot="title">修改信息</span>
+        <el-menu-item v-for="(item,i) in list"
+                      :key="i"
+                      :index="item.name"
+                      style="width: 164px;border-bottom: none;">
+            <i class="el-icon-star-on"/>
+            {{item.item}}
         </el-menu-item>
     </el-menu>
 </template>
@@ -16,15 +20,11 @@
         name: "SideMenu",
         data() {
             return {
-                index: ''
+                list: [
+                    {name: '/userInfo', item: '个人信息'}
+                ]
             }
         },
-        methods: {
-            handleSelect(key, keyPath) {
-                this.index = key;
-                this.$emit('load');
-            }
-        }
     }
 </script>
 
