@@ -4,6 +4,7 @@ import Carousel from 'element-ui'
 import CarouselItem from 'element-ui'
 import router from './router'
 import store from './store'
+import Router from 'vue-router'
 import './plugins/element.js'
 
 Vue.use(Carousel)
@@ -43,6 +44,11 @@ router.beforeEach((to, from, next) => {
         }
     }
 );
+
+const originalPush = Router.prototype.push
+Router.prototype.push = function push(location) {
+    return originalPush.call(this, location).catch(err => err)
+}
 
 new Vue({
     router,
