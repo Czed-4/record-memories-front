@@ -1,6 +1,6 @@
 <template>
     <el-container style="height: calc(100vh - 40px);position: relative">
-        <el-aside class="aside">
+        <el-aside>
             <side-menu ref="sideMenu" @load="loadMemoryByType"/>
         </el-aside>
         <el-container>
@@ -28,10 +28,9 @@
 </template>
 
 <script>
-    import SideMenu from "./SideMenu";
-    import SearchMemory from "./SearchMemory";
-    import Memory from "./Memory";
-
+    const SideMenu = () => import("./SideMenu")
+    const SearchMemory = () => import("./SearchMemory")
+    const Memory = () => import("./Memory")
     export default {
         name: "Memories",
         components: {SideMenu, SearchMemory, Memory},
@@ -113,10 +112,6 @@
 </script>
 
 <style scoped>
-    .aside {
-        width: 200px;
-    }
-
     .pagination {
         margin-left: 250px;
         padding-top: 5px;

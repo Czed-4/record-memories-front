@@ -35,8 +35,10 @@
                 <el-form-item prop="type"
                               label="分类">
                     <el-select v-model="form.type" placeholder="记忆分类" style="width: 110px">
-                        <el-option label="个人成长" value="1"/>
+                        <el-option label="个人记忆" value="1"/>
                         <el-option label="情感记忆" value="2"/>
+                        <el-option label="地点记忆" value="3"/>
+                        <el-option label="其他记忆" value="4"/>
                     </el-select>
                 </el-form-item>
                 <el-form-item prop="detail"

@@ -7,8 +7,7 @@
 
 <script>
     // 菜单栏
-    import NavMenu from '../components/commons/NavMenu'
-
+    const NavMenu = () => import("../components/commons/NavMenu")
     export default {
         name: "Home",
         components: {NavMenu}

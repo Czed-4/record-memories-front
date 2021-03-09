@@ -21,8 +21,7 @@
 </template>
 
 <script>
-    import AddMemory from "./AddMemory";
-
+    const AddMemory = () => import("./AddMemory")
     export default {
         name: "SearchMemory",
         components: {AddMemory},

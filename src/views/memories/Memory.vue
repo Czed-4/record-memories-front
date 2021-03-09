@@ -21,9 +21,8 @@
 </template>
 
 <script>
-    import UpdateMemory from "./UpdateMemory";
-    import SideMenu from "./SideMenu";
-
+    const SideMenu = () => import("./SideMenu")
+    const UpdateMemory = () => import("./UpdateMemory")
     export default {
         name: "Memory",
         components: {UpdateMemory, SideMenu},
