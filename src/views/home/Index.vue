@@ -31,7 +31,7 @@
                         src: require("../../assets/autumn.jpg")
                     },
                     {
-                        name: "autumn",
+                        name: "winter",
                         src: require("../../assets/winter.jpg")
                     }
                 ]

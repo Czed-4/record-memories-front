@@ -6,8 +6,7 @@
 </template>
 
 <script>
-    // 菜单栏
-    const NavMenu = () => import("../components/commons/NavMenu")
+    import NavMenu from "../components/commons/NavMenu";
     export default {
         name: "Home",
         components: {NavMenu}
