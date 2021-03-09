@@ -45,7 +45,7 @@
         pointer-events: none;
         position: absolute;
         top: 15px;
-        right: 35%;
+        right: 43%;
         font-size: 25px;
         font-weight: bold
     }
@@ -61,9 +61,9 @@
     .el-icon-switch-button {
         cursor: pointer;
         outline: 0;
-        float: right;
         font-size: 40px;
         color: white;
-        padding: 10px
+        padding: 10px;
+        margin-left: 1000px;
     }
 </style>

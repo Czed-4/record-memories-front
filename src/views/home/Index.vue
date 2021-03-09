@@ -1,8 +1,8 @@
 <template>
-    <el-carousel height="666px"
+    <el-carousel height="4000px"
                  :interval=3000
                  :initial-index=0
-                 arrow="always"
+                 indicator-position="none"
                  style="width:100%">
         <el-carousel-item v-for="item in images" :key="item.name">
             <div>

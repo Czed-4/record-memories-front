@@ -15,13 +15,6 @@ export default new VueRouter({
     mode: 'history',
     routes: [
         {
-            path: '/',
-            name: 'Index',
-            redirect: '/index',
-            component: Index,
-            meta: {requireAuth: true}
-        },
-        {
             path: '/login',
             name: 'Login',
             component: Login
