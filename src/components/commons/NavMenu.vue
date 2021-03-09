@@ -45,7 +45,7 @@
         pointer-events: none;
         position: absolute;
         top: 15px;
-        right: 43%;
+        right: 35%;
         font-size: 25px;
         font-weight: bold
     }
@@ -64,6 +64,6 @@
         font-size: 40px;
         color: white;
         padding: 10px;
-        margin-left: 1000px;
+        float: right;
     }
 </style>
