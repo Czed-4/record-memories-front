@@ -1,10 +1,10 @@
 <template>
-    <el-menu :default-active="this.$route.path"
-             router
+    <el-menu router
              class="menu"
              mode="horizontal"
              text-color="white"
-             active-text-color="red">
+             active-text-color="red"
+             :default-active="this.$route.path">
         <el-menu-item v-for="(item,i) in navList" :key="i" :index="item.name">
             {{ item.navItem }}
         </el-menu-item>
@@ -42,28 +42,27 @@
 
 <style scoped>
     span {
-        pointer-events: none;
-        position: absolute;
         top: 15px;
-        right: 35%;
         font-size: 25px;
-        font-weight: bold
+        font-weight: bold;
+        position: relative;
+        pointer-events: none;
     }
 
     .menu {
-        background: black;
         color: white;
-        font-weight: bold;
+        background: black;
         min-width: 1300px;
+        font-weight: bold;
         position: relative;
     }
 
     .el-icon-switch-button {
-        cursor: pointer;
         outline: 0;
-        font-size: 40px;
         color: white;
-        padding: 10px;
         float: right;
+        padding: 10px;
+        font-size: 40px;
+        cursor: pointer;
     }
 </style>

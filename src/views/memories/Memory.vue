@@ -146,12 +146,12 @@
     }
 
     .memory {
-        background: #000000;
         float: left;
         width: 200px;
         height: 275px;
+        position: relative;
         margin-right: 10px;
         margin-bottom: 10px;
-        position: relative;
+        background: #000000;
     }
 </style>

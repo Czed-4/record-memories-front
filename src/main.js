@@ -7,14 +7,14 @@ import store from './store'
 import Router from 'vue-router'
 import './plugins/element.js'
 
-Vue.use(Carousel)
-Vue.use(CarouselItem)
 const axios = require('axios');
-const baseUrl = process.env.VUE_APP_API_URL
+const baseUrl = process.env.VUE_APP_API_URL;
 axios.defaults.baseURL = baseUrl;
 axios.defaults.withCredentials = true;
 axios.defaults.timeout = 10000;
 
+Vue.use(Carousel);
+Vue.use(CarouselItem);
 Vue.prototype.$axios = axios;
 Vue.config.productionTip = false;
 

@@ -1,53 +1,69 @@
 <template>
     <div>
-        <div style="margin-top:10px;margin-left:40px;float:left">
-            <el-button @click=""
+        <div style="margin: 10px 0 0 40px;float: left">
+            <!--<el-button @click=""
                        type="primary"
                        icon="el-icon-edit">修改
-            </el-button>
+            </el-button>-->
         </div>
-        <div style="text-align:left;clear:both">
+        <div style="text-align: left;clear: both">
             <el-form v-model="form" :inline="true" class="form">
-                <el-form-item prop="realName"
+                <el-form-item label="姓名"
                               size="small"
-                              label="姓名"
+                              prop="realName"
                               label-width="40px">
-                    <el-input class="form-item" v-model="form.realName" value="form.realName"
+                    <el-input class="form-item"
+                              value="form.realName"
+                              v-model="form.realName"
                               :disabled="true"/>
                 </el-form-item>
-                <el-form-item prop="username"
+                <el-form-item label="账号"
                               size="small"
-                              label="账号"
+                              prop="username"
                               label-width="40px">
-                    <el-input class="form-item" v-model="form.username" value="form.username"
+                    <el-input class="form-item"
+                              value="form.username"
+                              v-model="form.username"
                               :disabled="true"/>
                 </el-form-item>
-                <el-form-item prop="phone"
+                <el-form-item label="电话"
                               size="small"
-                              label="电话"
+                              prop="phone"
                               label-width="40px">
-                    <el-input class="form-item" v-model="form.phone" value="form.phone" :disabled="true"/>
+                    <el-input class="form-item"
+                              value="form.phone"
+                              v-model="form.phone"
+                              :disabled="true"/>
                 </el-form-item>
-                <el-form-item prop="email"
+                <el-form-item label="邮箱"
                               size="small"
-                              label="邮箱"
+                              prop="email"
                               label-width="40px">
-                    <el-input class="form-item" v-model="form.email" value="form.email" :disabled="true"/>
+                    <el-input class="form-item"
+                              value="form.email"
+                              v-model="form.email"
+                              :disabled="true"/>
                 </el-form-item>
-                <el-form-item prop="status"
+                <el-form-item label="状态"
                               size="small"
-                              label="状态"
+                              prop="status"
                               label-width="40px">
-                    <el-select class="form-item" v-model="form.status" value="form.status" :disabled="true">
+                    <el-select class="form-item"
+                               value="form.status"
+                               v-model="form.status"
+                               :disabled="true">
                         <el-option label="启用" value="Y"></el-option>
                         <el-option label="禁用" value="N"></el-option>
                     </el-select>
                 </el-form-item>
                 <el-form-item prop="sex"
-                              size="small"
                               label="性别"
+                              size="small"
                               label-width="40px">
-                    <el-select class="form-item" v-model="form.sex" value="form.sex" :disabled="true">
+                    <el-select class="form-item"
+                               value="form.sex"
+                               v-model="form.sex"
+                               :disabled="true">
                         <el-option label="男" value="1"></el-option>
                         <el-option label="女" value="0"></el-option>
                     </el-select>
@@ -81,8 +97,8 @@
 
 <style>
     .form {
-        font-weight: bold;
         margin-top: 60px;
+        font-weight: bold;
     }
 
     .form-item {

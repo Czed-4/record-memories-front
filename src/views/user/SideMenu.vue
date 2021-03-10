@@ -1,14 +1,14 @@
 <template>
-    <el-menu :default-active="this.$route.path"
-             router
+    <el-menu router
              class="menu"
              mode="horizontal"
              text-color="white"
-             active-text-color="red">
+             active-text-color="red"
+             :default-active="this.$route.path">
         <el-menu-item v-for="(item,i) in list"
+                      style="width: 164px;border-bottom: none;"
                       :key="i"
-                      :index="item.name"
-                      style="width: 164px;border-bottom: none;">
+                      :index="item.name">
             <i class="el-icon-star-on"/>
             {{item.item}}
         </el-menu-item>
@@ -30,11 +30,11 @@
 
 <style scoped>
     .menu {
-        background-color: black;
-        font-weight: bold;
-        border: white 1px;
-        border-right-style: solid;
-        height: 100%;
         width: 164px;
+        height: 100%;
+        border: white 1px;
+        font-weight: bold;
+        background-color: black;
+        border-right-style: solid;
     }
 </style>

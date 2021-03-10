@@ -46,11 +46,11 @@
 
 <style scoped>
     .menu {
-        background-color: black;
-        font-weight: bold;
-        border: white 1px;
-        border-right-style: solid;
-        height: 100%;
         width: 164px;
+        height: 100%;
+        border: white 1px;
+        font-weight: bold;
+        background-color: black;
+        border-right-style: solid;
     }
 </style>

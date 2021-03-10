@@ -11,16 +11,16 @@
                 <memory ref="memory" @load="loadMemoryByType" @initPageParam="initPageParam"/>
             </el-main>
             <el-footer>
-                <el-pagination class="pagination"
+                <el-pagination background
+                               class="pagination"
                                v-show="this.total > 0"
-                               background
-                               layout="total, sizes, prev, pager, next, jumper"
-                               @current-change="handleCurrentChange"
+                               layout="sizes,prev,pager,next,total"
                                @size-change="handleSizeChange"
-                               :current-page="this.current"
+                               @current-change="handleCurrentChange"
+                               :total="this.total"
                                :page-size="this.size"
                                :page-sizes="[10, 20, 50]"
-                               :total="this.total">
+                               :current-page="this.current">
                 </el-pagination>
             </el-footer>
         </el-container>
@@ -113,15 +113,13 @@
 
 <style scoped>
     .pagination {
-        margin-left: 340px;
         padding-top: 5px;
-        position: fixed;
     }
 </style>
 
 <style>
     .pagination > span {
         color: white !important;
-        font-size: 14px !important;
+        font-size: 16px !important;
     }
 </style>

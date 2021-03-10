@@ -47,8 +47,8 @@
 <style scoped>
     .search {
         display: flex;
+        position: fixed;
         align-items: center;
         justify-content: center;
-        position: fixed;
     }
 </style>

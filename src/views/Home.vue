@@ -7,6 +7,7 @@
 
 <script>
     import NavMenu from "../components/commons/NavMenu";
+
     export default {
         name: "Home",
         components: {NavMenu}
@@ -15,13 +16,13 @@
 
 <style scoped>
     .homeBackground {
-        background: url("../assets/home.jpg") no-repeat center;
-        background-size: cover;
-        height: calc(100vh + 160px);
-        width: 100%;
         top: 0;
         left: 0;
-        position: fixed;
         z-index: -1;
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        background: no-repeat url("../assets/home.jpg");
+        background-size: cover;
     }
 </style>

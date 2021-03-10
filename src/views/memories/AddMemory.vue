@@ -1,20 +1,20 @@
 <template>
-    <el-dialog :visible.sync="dialogFormVisible"
-               :modal-append-to-body="false"
+    <el-dialog center
                append-to-body
-               title="添加记忆"
                top="20vh"
                width="600px"
-               center
-               @close="clear">
+               title="添加记忆"
+               @close="clear"
+               :modal-append-to-body="false"
+               :visible.sync="dialogFormVisible">
         <span style="height: 282px;width: 38%;float: left">
             <el-upload withCredentials
-                       :action="uploadUrl"
                        :data="user"
+                       :action="uploadUrl"
                        :show-file-list="false"
-                       :before-upload="beforeUpload"
+                       :on-error="handleError"
                        :on-success="handleSuccess"
-                       :on-error="handleError">
+                       :before-upload="beforeUpload">
                 <img v-if="form.url" :src="form.url" alt="图片丢失了">
                 <img v-else :src="require('../../assets/upload.jpg')" alt="图片丢失了"
                      style="border-style: dashed;color: #cac6c6">
@@ -149,7 +149,7 @@
 
 <style scoped>
     img {
-        height: 260px;
         width: 190px;
+        height: 260px;
     }
 </style>

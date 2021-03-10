@@ -72,35 +72,35 @@
 
 <style scoped>
     .login-container {
-        border-radius: 15px;
-        background-clip: padding-box;
-        margin: 13% auto;
         width: 300px;
-        padding: 35px 35px 15px 35px;
+        margin: 13% auto;
         background: #ffffff;
+        border-radius: 15px;
         border: 1px solid #eaeaea;
+        padding: 35px 35px 15px 35px;
         box-shadow: 0 0 25px #cac6c6;
+        background-clip: padding-box;
     }
 
     .login-title {
-        margin: 0 auto 40px auto;
-        text-align: center;
         color: #505458;
+        text-align: center;
+        margin: 0 auto 40px auto;
     }
 
     .login-button {
         width: 100%;
+        border: 5px;
         background: #252121;
-        border: 5px
     }
 
     .loginBackground {
-        background: url("../assets/login.jpg") no-repeat center;
-        background-size: cover;
-        position: fixed;
-        height: 100%;
-        width: 100%;
-        left: 0;
         top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        background:no-repeat url("../assets/login.jpg");
+        background-size: cover;
     }
 </style>

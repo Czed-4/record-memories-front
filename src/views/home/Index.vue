@@ -1,12 +1,10 @@
 <template>
-    <el-carousel height="4000px"
-                 :interval=3000
-                 :initial-index=0
-                 indicator-position="none"
-                 style="width:100%">
+    <el-carousel height="6000px"
+                 :interval=1500
+                 :initial-index=0>
         <el-carousel-item v-for="item in images" :key="item.name">
             <div>
-                <img :src="item.src" style="height:100%;width:100%;" alt="图片丢失了"/>
+                <img :src="item.src" alt="图片丢失了"/>
             </div>
         </el-carousel-item>
     </el-carousel>
@@ -41,5 +39,8 @@
 </script>
 
 <style scoped>
-
+    img {
+        width: 100%;
+        height: 100%;
+    }
 </style>
