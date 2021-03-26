@@ -11,7 +11,7 @@
             <el-dialog :visible.sync="dialogVisible"
                        :modal="false"
                        size="tiny">
-              <img width="100%" :src="form.url" alt="图片丢失了">
+                <img width="100%" :src="form.url.substring(0,form.url.length-4)+'-max'+form.url.substring(form.url.length-4,form.url.length)" alt="图片丢失了">
             </el-dialog>
         </span>
         <span style="height: 282px;width: 62%;float: right">

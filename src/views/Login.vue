@@ -1,25 +1,29 @@
 <template>
     <div class="loginBackground">
-        <el-form class="login-container" :model="loginForm">
-            <h3 class="login-title">系统登录</h3>
-            <el-form-item prop="username">
-                <el-input type="text"
-                          placeholder="请输入账号"
-                          v-model="loginForm.username"/>
-            </el-form-item>
-            <el-form-item prop="password">
-                <el-input type="password"
-                          placeholder="请输入密码"
-                          v-model="loginForm.password"/>
-            </el-form-item>
-            <el-form-item>
-                <el-button class="login-button"
-                           type="primary"
-                           v-on:click="login">登录
-                </el-button>
-            </el-form-item>
-        </el-form>
-        <a href="https://beian.miit.gov.cn/" style="color: white;text-decoration: none">粤ICP备2021006604号-1</a>
+        <div style="height: 70%">
+            <el-form class="login-container" :model="loginForm">
+                <h3 class="login-title">系统登录</h3>
+                <el-form-item prop="username">
+                    <el-input type="text"
+                              placeholder="请输入账号"
+                              v-model="loginForm.username"/>
+                </el-form-item>
+                <el-form-item prop="password">
+                    <el-input type="password"
+                              placeholder="请输入密码"
+                              v-model="loginForm.password"/>
+                </el-form-item>
+                <el-form-item>
+                    <el-button class="login-button"
+                               type="primary"
+                               v-on:click="login">登录
+                    </el-button>
+                </el-form-item>
+            </el-form>
+        </div>
+        <div style="height: 5%">
+            <a href="https://beian.miit.gov.cn/" class="login-hypertext">粤ICP备2021006604号-1</a>
+        </div>
     </div>
 </template>
 
@@ -100,7 +104,12 @@
         width: 100%;
         height: 100%;
         position: fixed;
-        background:no-repeat url("../assets/login.jpg");
+        background: no-repeat url("../assets/login.jpg");
         background-size: cover;
+    }
+
+    .login-hypertext {
+        color: white;
+        text-decoration: none;
     }
 </style>
